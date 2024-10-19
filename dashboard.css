@@ -1,0 +1,80 @@
+/* Definir o estilo geral do corpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Preto como cor predominante */
+    color: #fff;
+    text-align: center;
+}
+
+/* Estilo para o logo do escudo */
+.escudo {
+    width: 600px; /* Aumenta o tamanho do escudo */
+    height: auto;
+    margin-top: 20px; /* Espaço entre os botões e o escudo */
+}
+
+/* Container para os botões */
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os botões */
+}
+
+/* Estilo dos botões */
+.button {
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000; /* Texto em preto */
+    background-color: #ffcc00; /* Amarelo nos botões */
+    border: none;
+    margin: 5px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+/* Estilo de hover para os botões */
+.button:hover {
+    background-color: #ffd633; /* Amarelo mais claro no hover */
+    color: #000; /* Texto preto continua no hover */
+}
+
+/* Área de conteúdo principal */
+.content {
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #222; /* Preto levemente mais claro para contraste */
+    display: inline-block;
+    border-radius: 10px;
+    color: #ccc;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Título e texto na área de conteúdo */
+.content h1 {
+    color: #ffcc00; /* Título em amarelo */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #ccc; /* Cinza claro */
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
