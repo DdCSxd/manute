@@ -58,29 +58,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-</head>
+    <title>Tela de Login</title>
 </head>
 <body>
-    <div class = "login">Login<br/></div>
 
-    <h2 >Login</h2>
-    <img class = "imagemsl" src="login.jpeg" alt="imagem">
+     <!-- Header com fundo amarelo e texto preto -->
+     <header>
+        <h1>Nova Mensagem</h1>
+    </header>
+
+     <!-- Imagem do escudo centralizada acima do login-container -->
+    <img src="breve_aux-removebg-preview.png" alt="logo" class="escudo-login">
     
-    <!-- Mostrar mensagem de erro, se houver -->
-    <?php if (!empty($error)): ?>
-        <p style="color: red;"><?php echo $error; ?></p>
-    <?php endif; ?>
+    <main>
+        <!-- Container principal para o login -->
+        <div class="login-container">
+            <h2>Login</h2>
+            
+            <!-- Mostrar mensagem de erro, se houver -->
+            <?php if (!empty($error)): ?>
+                <p class="error-message"><?php echo $error; ?></p>
+                <?php endif; ?>
+                
+                <!-- Formulário de login -->
+                <form action="login.php" method="post">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+                    
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    
+                    <input class="botao" type="submit" value="Entrar">
+                </form>
+            </div>
+    </main>
+    <!-- Footer com fundo amarelo e texto preto -->
+    <footer>
+        <p>Criação e Desenvolvimento: Nome ©2024 - Oficina de Programação</p>
+    </footer>
 
-    <form action="login.php" method="post">
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required><br><br>
 
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        <input class="botao" type="submit" value="Entrar">
-    </form>
 </body>
 </html>
